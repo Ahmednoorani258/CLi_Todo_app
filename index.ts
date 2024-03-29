@@ -20,7 +20,7 @@ async function rainbow(arr:string,time:number) {
 }
 function looping(a:string[]){
     for(let ele of a){
-        console.log(`${chalk.yellow(ele)}`)
+        console.log(`${chalk.magenta(ele)}`)
     }
 }
 
@@ -93,7 +93,7 @@ while (true) {
             console.log(chalk.redBright(`\nYour Todo-List is empty`));
             
         }else{
-        console.log(`\n${chalk.bgGrey.yellowBright.bold(todos)}`);
+       looping(todos)
         }
     }
     if(userinput.select === "Delete"){

@@ -18,7 +18,7 @@ async function rainbow(arr, time) {
 }
 function looping(a) {
     for (let ele of a) {
-        console.log(`${chalk.yellow(ele)}`);
+        console.log(`${chalk.magenta(ele)}`);
     }
 }
 let todos = [];
@@ -79,7 +79,7 @@ async function createTodo(arr) {
                 console.log(chalk.redBright(`\nYour Todo-List is empty`));
             }
             else {
-                console.log(`\n${chalk.bgGrey.yellowBright.bold(todos)}`);
+                looping(todos);
             }
         }
         if (userinput.select === "Delete") {
@@ -99,6 +99,7 @@ async function createTodo(arr) {
             }
         }
         if (userinput.select === "Exit") {
+            await rainbow(`Thank you for using my Todo-app`, 3000);
             break;
         }
     }
